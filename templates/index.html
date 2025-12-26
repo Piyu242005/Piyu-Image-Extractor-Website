@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Extractor | Premium Tool</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fa-solid fa-layer-group"></i> <span>Piyu ImgExtract</span>
+                </div>
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="{{ url_for('pricing') }}" class="premium-btn">Go Premium</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h1 class="hero-title">Extract Images from <span class="gradient-text">Any Website</span></h1>
+                <p class="hero-subtitle">The fastest way to collect visual assets for your next project.</p>
+
+                <div class="search-container">
+                    <div class="input-group">
+                        <i class="fa-solid fa-link input-icon"></i>
+                        <input type="url" id="url-input" placeholder="Paste website URL (e.g. https://unsplash.com)"
+                            required>
+                        <button id="extract-btn" class="primary-btn">
+                            <span>Extract Images</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filters-summary hidden" id="filters-summary">
+                    <div class="filter-pill">
+                        <span>Total Found: <strong id="total-count">0</strong></span>
+                    </div>
+                    <div class="actions">
+                        <button id="select-all-btn" class="secondary-btn small">Select All</button>
+                        <button id="download-all-btn" class="primary-btn small">
+                            <i class="fa-solid fa-download"></i> Download Selected
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Grid -->
+            <section id="results-section" class="results-grid hidden">
+                <!-- Javascript will populate this -->
+            </section>
+
+            <!-- Loading State -->
+            <div id="loader" class="loader-container hidden">
+                <div class="spinner"></div>
+                <p>Analyzing website assets...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state hidden">
+                <i class="fa-regular fa-image"></i>
+                <h3>No Images Found</h3>
+                <p>Try a different URL or check if the site blocks bots.</p>
+            </div>
+
+
+
+            <!-- How It Works Section -->
+            <section class="how-it-works-section">
+                <div class="hiw-container">
+                    <div class="hiw-header">
+                        <h2 class="hiw-title">How Does It Work?</h2>
+                        <p class="hiw-subtitle">Extract images from any public website in three simple steps.</p>
+                    </div>
+
+                    <div class="hiw-content">
+                        <!-- Curved Line Graphic (Hidden on mobile) -->
+                        <div class="hiw-line">
+                            <img src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg"
+                                alt="" />
+                        </div>
+
+                        <div class="hiw-steps-grid">
+                            <!-- Step 1 -->
+                            <div class="hiw-step">
+                                <div class="step-icon">
+                                    <span>1</span>
+                                </div>
+                                <h3 class="step-title">Paste Website URL</h3>
+                                <p class="step-desc">Enter the link of the website from which you want to extract
+                                    images.</p>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="hiw-step">
+                                <div class="step-icon">
+                                    <span>2</span>
+                                </div>
+                                <h3 class="step-title">Extract Images</h3>
+                                <p class="step-desc">Our system scans the page and collects all available images
+                                    automatically.</p>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="hiw-step">
+                                <div class="step-icon">
+                                    <span>3</span>
+                                </div>
+                                <h3 class="step-title">Preview & Download</h3>
+                                <p class="step-desc">View extracted images and download selected files or all images at
+                                    once.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fa-solid fa-layer-group"></i> <span>Piyu ImgExtract</span>
+                    </div>
+                    <p class="footer-desc">
+                        The premium tool for designers and developers to extract images from any website in seconds.
+                        Fast, secure, and easy to use.
+                    </p>
+                    <ul class="social-links">
+
+                        <li><a href="https://github.com/Piyu242005" aria-label="GitHub"><i
+                                    class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.instagram.com/my.life_24143/" aria-label="Instagram"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/piyu24?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Columns -->
+                <div class="footer-links-group">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="{{ url_for('about') }}">About</a></li>
+                            <li><a href="{{ url_for('features') }}">Features</a></li>
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Delivery Details</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-newsletter">
+                    <h4>Subscribe to newsletter</h4>
+                    <form action="#" method="POST" class="newsletter-form">
+                        <div class="input-wrapper">
+                            <input type="email" name="email" id="newsletter-email" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <button type="submit" class="primary-btn full-width">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <hr>
+                <p>&copy; 2025 Piyu ImgExtract. All Rights Reserved To Piyush Ramteke.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
