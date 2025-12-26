@@ -31,6 +31,23 @@
 *   **Font Awesome**: For scalable vector icons.
 *   **Google Fonts**: 'Space Grotesk' for headings and 'Inter' for body text.
 
+## 🖼️ Website Screenshots
+
+### About Us
+![About Us](Screenshot/About%20US.jpeg)
+
+### Dashboard
+![Dashboard](Screenshot/Dashboard.jpeg)
+
+### Features
+![Features](Screenshot/Features.jpeg)
+
+### Pricing
+![Pricing](Screenshot/Pricing.jpeg)
+
+### How the Website Works
+![Website Works](Screenshot/Website%20Works.jpeg)
+
 ## ⚙️ Installation & Setup
 
 1.  **Clone the Repository**
@@ -100,22 +117,6 @@ TT/
     └── pricing.html    # Pricing page template
 ```
 
-## 🖼️ Website Screenshots
-
-### About Us
-![About Us](About%20Us.jpeg)
-
-### Dashboard
-![Dashboard](Dashboard.jpeg)
-
-### Features
-![Features](Features.jpeg)
-
-### Pricing
-![Pricing](Pricing.jpeg)
-
-### How the Website Works
-![Website Works](Website%20Works.jpeg)
 
 ## 📄 License
 
