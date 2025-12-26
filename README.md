@@ -100,6 +100,23 @@ TT/
     └── pricing.html    # Pricing page template
 ```
 
+## 🖼️ Website Screenshots
+
+### About Us
+![About Us](About%20Us.jpeg)
+
+### Dashboard
+![Dashboard](Dashboard.jpeg)
+
+### Features
+![Features](Features.jpeg)
+
+### Pricing
+![Pricing](Pricing.jpeg)
+
+### How the Website Works
+![Website Works](Website%20Works.jpeg)
+
 ## 📄 License
 
 © 2025 Piyu ImgExtract. All Rights Reserved To Piyush Ramteke.
